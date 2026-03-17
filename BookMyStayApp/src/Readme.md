@@ -1,31 +1,21 @@
-# Book My Stay App
+# Book My Stay App  
+## Use Case 4: Room Search & Availability Check  
 
-## Use Case 3: Centralized Room Inventory Management
+### Overview  
+Allows users to search available rooms without modifying inventory.
 
-### Overview
+### Features  
+- View available rooms  
+- Read-only access to inventory  
+- Displays only rooms with availability  
 
-A simple system to manage hotel room availability using a centralized inventory.
+### Concept  
+Uses a HashMap:
+Room Type → Available Rooms  
 
+### How to Run  
+javac RoomSearchApp.java  
+java RoomSearchApp  
 
-### Features
-
-* Add room types
-* Book rooms
-* Cancel bookings
-* View available rooms
-
-### Concept
-
-Uses a **HashMap** as a single source of truth:
-Room Type → Available Count
-
-### How to Run
-
-```bash
-javac RoomInventoryApp.java
-java RoomInventoryApp
-```
-
-### Output
-
-Displays room availability before and after booking/cancellation..
+### Output  
+Displays all available room types and counts.
