@@ -65,7 +65,7 @@ public class RoomInventoryApp {
 
         displayInventory();
 
-        // Cancellation
+        //Cancellation
         System.out.println("\nCancelling Single Room...");
         cancelRoom("Single Room");
 

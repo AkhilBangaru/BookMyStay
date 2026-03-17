@@ -6,6 +6,7 @@
 
 A simple system to manage hotel room availability using a centralized inventory.
 
+
 ### Features
 
 * Add room types
@@ -27,4 +28,4 @@ java RoomInventoryApp
 
 ### Output
 
-Displays room availability before and after booking/cancellation
+Displays room availability before and after booking/cancellation..
