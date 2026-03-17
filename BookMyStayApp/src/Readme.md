@@ -1,22 +1,21 @@
 # Book My Stay App  
-## Use Case 6: Reservation Confirmation & Room Allocation  
+## Use Case 7: Add-On Service Selection  
 
 ### Overview  
-Confirms bookings and assigns rooms while preventing double allocation.
+Allows users to select extra services for a reservation.
 
 ### Features  
-- Assign unique room IDs  
-- Update inventory after booking  
-- Prevent duplicate room allocation  
+- Add services (Breakfast, WiFi, etc.)  
+- Calculate total cost  
+- Display selected services  
 
 ### Concept  
-- HashMap → room availability  
-- Set → unique room IDs  
-- Atomic allocation logic  
+- HashMap → service & cost  
+- List → selected services  
 
 ### How to Run  
-javac RoomAllocationApp.java  
-java RoomAllocationApp  
+javac AddOnServiceApp.java  
+java AddOnServiceApp  
 
 ### Output  
-Shows booking confirmations with assigned room IDs.
+Shows selected services and total cost.
