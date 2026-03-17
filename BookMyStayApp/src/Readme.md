@@ -1,21 +1,22 @@
 # Book My Stay App  
-## Use Case 5: Booking Request (FCFS)  
+## Use Case 6: Reservation Confirmation & Room Allocation  
 
 ### Overview  
-Processes booking requests using First-Come-First-Served (FIFO).
+Confirms bookings and assigns rooms while preventing double allocation.
 
 ### Features  
-- Add booking requests  
-- Process requests in order  
-- Display current queue  
+- Assign unique room IDs  
+- Update inventory after booking  
+- Prevent duplicate room allocation  
 
 ### Concept  
-Uses Queue (FIFO):
-First request → First processed  
+- HashMap → room availability  
+- Set → unique room IDs  
+- Atomic allocation logic  
 
 ### How to Run  
-javac BookingFCFSApp.java  
-java BookingFCFSApp  
+javac RoomAllocationApp.java  
+java RoomAllocationApp  
 
 ### Output  
-Shows request order and processing sequence.
+Shows booking confirmations with assigned room IDs.
