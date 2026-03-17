@@ -1,21 +1,21 @@
 # Book My Stay App  
-## Use Case 4: Room Search & Availability Check  
+## Use Case 5: Booking Request (FCFS)  
 
 ### Overview  
-Allows users to search available rooms without modifying inventory.
+Processes booking requests using First-Come-First-Served (FIFO).
 
 ### Features  
-- View available rooms  
-- Read-only access to inventory  
-- Displays only rooms with availability  
+- Add booking requests  
+- Process requests in order  
+- Display current queue  
 
 ### Concept  
-Uses a HashMap:
-Room Type → Available Rooms  
+Uses Queue (FIFO):
+First request → First processed  
 
 ### How to Run  
-javac RoomSearchApp.java  
-java RoomSearchApp  
+javac BookingFCFSApp.java  
+java BookingFCFSApp  
 
 ### Output  
-Displays all available room types and counts.
+Shows request order and processing sequence.
