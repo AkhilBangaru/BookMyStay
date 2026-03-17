@@ -27,4 +27,4 @@ java RoomInventoryApp
 
 ### Output
 
-Displays room availability before and after booking/cancellation.
+Displays room availability before and after booking/cancellation

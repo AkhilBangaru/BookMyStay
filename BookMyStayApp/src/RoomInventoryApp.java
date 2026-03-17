@@ -3,7 +3,6 @@ import java.util.Map;
 
 /**
  * Use Case 3: Centralized Room Inventory Management
- * Single-file version
  */
 public class RoomInventoryApp {
 
