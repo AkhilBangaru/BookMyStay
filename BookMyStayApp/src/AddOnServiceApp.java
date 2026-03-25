@@ -1,56 +1,55 @@
 import java.util.*;
 
-/**
- * Use Case 7: Add-On Service Selection
- */
-public class AddOnServiceApp {
+// Booking class to store details
+class Booking {
+    String guestName;
+    int roomNumber;
+    String date;
 
-    // Store available services with cost
-    private static Map<String, Integer> services = new HashMap<>();
-
-    // Store selected services for a reservation
-    private static List<String> selectedServices = new ArrayList<>();
-
-    // Initialize services
-    public static void initServices() {
-        services.put("Breakfast", 200);
-        services.put("WiFi", 100);
-        services.put("Airport Pickup", 500);
+    Booking(String guestName, int roomNumber, String date) {
+        this.guestName = guestName;
+        this.roomNumber = roomNumber;
+        this.date = date;
     }
 
-    // Add service to reservation
-    public static void addService(String service) {
-        if (services.containsKey(service)) {
-            selectedServices.add(service);
-            System.out.println(service + " added.");
-        } else {
-            System.out.println("Service not available.");
+    void display() {
+        System.out.println(guestName + " -> Room " + roomNumber + " -> " + date);
+    }
+}
+
+// Main application class
+public class BookingHistoryApp {
+
+    static ArrayList<Booking> history = new ArrayList<>();
+
+    // Add booking
+    public static void addBooking(String name, int room, String date) {
+        history.add(new Booking(name, room, date));
+    }
+
+    // View all bookings
+    public static void viewBookings() {
+        System.out.println("\n📜 Booking History:");
+        for (Booking b : history) {
+            b.display();
         }
     }
 
-    // Calculate total cost
-    public static int calculateTotal() {
-        int total = 0;
-        for (String s : selectedServices) {
-            total += services.get(s);
-        }
-        return total;
-    }
-
-    // Display selected services
-    public static void displayServices() {
-        System.out.println("\nSelected Services: " + selectedServices);
-        System.out.println("Total Add-on Cost: " + calculateTotal());
+    // Generate report
+    public static void generateReport() {
+        System.out.println("\n📊 Report:");
+        System.out.println("Total Bookings: " + history.size());
     }
 
     public static void main(String[] args) {
 
-        initServices();
+        // Sample data
+        addBooking("Akhil", 101, "10-03-2026");
+        addBooking("Ravi", 202, "12-03-2026");
+        addBooking("Sneha", 303, "15-03-2026");
 
-        // Simulate selection
-        addService("Breakfast");
-        addService("WiFi");
-
-        displayServices();
+        // Display data
+        viewBookings();
+        generateReport();
     }
 }
