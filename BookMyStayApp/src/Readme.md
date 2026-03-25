@@ -1,40 +1,41 @@
 # Book My Stay App  
-## Use Case 11: Concurrent Booking Simulation  
+## Use Case 12: Data Persistence & System Recovery  
 
 ### Overview  
-This feature simulates multiple users trying to book rooms at the same time. It ensures thread safety so that no two users can book the same room simultaneously.
+This feature ensures that booking data is saved permanently and can be restored when the system restarts. It prevents data loss and allows recovery of previous bookings.
 
 ---
 
 ### Features  
-- Simulate multiple users (threads)  
-- Prevent double booking  
-- Ensure thread-safe operations  
-- Display booking results  
+- Save booking data to file  
+- Load data when application restarts  
+- Maintain persistent storage  
+- Recover system state  
 
 ---
 
 ### Concept  
-- **Multithreading** → Simulate concurrent users  
-- **Synchronization** → Prevent race conditions  
-- **Shared Resource** → Room booking system  
-- **Thread Class** → Create user threads  
+- **File Handling** → Store data in files  
+- **Serialization** → Save objects  
+- **Deserialization** → Load objects  
+- **Exception Handling** → Handle file errors  
 
 ---
 
 ### How to Run  
-javac ConcurrentBookingApp.java  
-java ConcurrentBookingApp  
+javac PersistenceApp.java  
+java PersistenceApp  
 
 ---
 
 ### Sample Case  
-- User1 and User2 try booking Room 1 simultaneously  
-- Only one booking succeeds  
+- Add bookings  
+- Restart program  
+- Data is restored from file  
 
 ---
 
 ### Output  
-- Shows which user successfully booked  
-- Prevents duplicate bookings  
-- Demonstrates thread safety  
+- Displays saved bookings  
+- Restores previous state  
+- Confirms successful persistence  
