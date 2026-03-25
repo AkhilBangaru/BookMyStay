@@ -1,41 +1,40 @@
 # Book My Stay App  
-## Use Case 9: Error Handling & Validation  
+## Use Case 10: Booking Cancellation & Inventory Rollback  
 
 ### Overview  
-This feature ensures that invalid inputs and runtime errors are properly handled to maintain system stability. It improves user experience by preventing crashes and guiding users with proper messages.
+This feature allows users to cancel bookings and ensures that the room inventory is updated accordingly. When a booking is cancelled, the room becomes available again.
 
 ---
 
 ### Features  
-- Validate user inputs (room number, name, etc.)  
-- Handle invalid entries gracefully  
-- Prevent system crashes using exception handling  
-- Display meaningful error messages  
+- Cancel an existing booking  
+- Update room availability after cancellation  
+- Maintain accurate inventory  
+- Display updated booking status  
 
 ---
 
 ### Concept  
-- **Try-Catch Blocks** → Handle runtime exceptions  
-- **Input Validation** → Check user inputs  
-- **Exception Handling** → Avoid program crashes  
-- **Conditional Statements** → Validate data  
+- **ArrayList** → Store bookings  
+- **Boolean Flag** → Track room availability  
+- **Methods** → Handle cancellation & updates  
+- **OOP Concepts** → Manage booking data  
 
 ---
 
 ### How to Run  
-javac ValidationApp.java  
-java ValidationApp  
+javac CancellationApp.java  
+java CancellationApp  
 
 ---
 
-### Sample Cases  
-- Invalid room number → Error message  
-- Empty name → Warning  
-- Wrong input type → Exception handled  
+### Sample Case  
+- Booking: Room 101 → Akhil  
+- Cancel Booking → Room becomes available again  
 
 ---
 
 ### Output  
-- Displays proper error messages  
-- Prevents crashes  
-- Ensures smooth user interaction  
+- Displays cancellation confirmation  
+- Updates room status  
+- Shows available rooms after rollback  
