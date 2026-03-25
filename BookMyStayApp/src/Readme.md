@@ -1,40 +1,40 @@
 # Book My Stay App  
-## Use Case 10: Booking Cancellation & Inventory Rollback  
+## Use Case 11: Concurrent Booking Simulation  
 
 ### Overview  
-This feature allows users to cancel bookings and ensures that the room inventory is updated accordingly. When a booking is cancelled, the room becomes available again.
+This feature simulates multiple users trying to book rooms at the same time. It ensures thread safety so that no two users can book the same room simultaneously.
 
 ---
 
 ### Features  
-- Cancel an existing booking  
-- Update room availability after cancellation  
-- Maintain accurate inventory  
-- Display updated booking status  
+- Simulate multiple users (threads)  
+- Prevent double booking  
+- Ensure thread-safe operations  
+- Display booking results  
 
 ---
 
 ### Concept  
-- **ArrayList** → Store bookings  
-- **Boolean Flag** → Track room availability  
-- **Methods** → Handle cancellation & updates  
-- **OOP Concepts** → Manage booking data  
+- **Multithreading** → Simulate concurrent users  
+- **Synchronization** → Prevent race conditions  
+- **Shared Resource** → Room booking system  
+- **Thread Class** → Create user threads  
 
 ---
 
 ### How to Run  
-javac CancellationApp.java  
-java CancellationApp  
+javac ConcurrentBookingApp.java  
+java ConcurrentBookingApp  
 
 ---
 
 ### Sample Case  
-- Booking: Room 101 → Akhil  
-- Cancel Booking → Room becomes available again  
+- User1 and User2 try booking Room 1 simultaneously  
+- Only one booking succeeds  
 
 ---
 
 ### Output  
-- Displays cancellation confirmation  
-- Updates room status  
-- Shows available rooms after rollback  
+- Shows which user successfully booked  
+- Prevents duplicate bookings  
+- Demonstrates thread safety  
